@@ -9,6 +9,6 @@ public class D1 extends B {
    public void f5( ) {System.out.println("D1 f5");}
    private void f6( ) {System.out.println("D1 f5");}
 
-   public void d1Caller( ) {f1( ); f2( ); f3( ); f4( ); f5( ); f6( );}
+   public void d1Caller( ) {f1( ); /*f2( );*/ f3( ); f4( ); f5( ); f6( );}
 }
 
