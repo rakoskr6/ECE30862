@@ -1,0 +1,35 @@
+intValue in Integer class in C0 class
+intValue in Integer class in C0 class
+C0 class
+C0 class
+
+intValue in Integer class in C0 class
+intValue in Integer class in C0 class
+C0 class
+C0 class
+
+intValue in Integer class in C0 class
+intValue in Integer class in C0 class
+floatValue in Float class in C1 class
+C1 class
+C1 class
+C1 class
+
+intValue in Integer class in C1 class
+intValue in Integer class in C1 class
+floatValue in Float class in C1 class
+C0 class
+C0 class
+C1 class
+
+intValue in Integer class using getA in C0 class
+intValue in Integer class using getB in C0 class
+intValue in Integer class using getX in C0 class
+intValue in Integer class using getY in C0 class
+
+intValue in Integer class using getA in C0 class
+intValue in Integer class using getB in C0 class
+intValue in Integer class using getC in C1 class
+intValue in Integer class using getX in C0 class
+intValue in Integer class using getY in C1 class
+intValue in Integer class using getZ in C1 class
