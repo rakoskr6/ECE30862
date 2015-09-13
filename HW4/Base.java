@@ -1,8 +1,8 @@
-private class Base {
+public class Base {
 
-   private Base( ) { }
+   public Base( ) { }
 
-   private void f1( ) {
+   public void f1( ) {
       System.out.println("Base f1");
    }
 }
