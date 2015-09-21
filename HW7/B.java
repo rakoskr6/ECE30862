@@ -41,8 +41,11 @@ public class B {
       B b = new B( );
       D d = new D( );
 
-      foo(d, f);
-      foo(c, d, df);
+      //foo(d, f);
+      System.out.println("Error");
+      //foo(c, d, df);
+      System.out.println("Error");
       foo(s); 
       foo(i); 
+   }
 }

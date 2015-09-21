@@ -13,25 +13,31 @@ class Main {
       D d = new D( );
 
       System.out.println("Direct calls");
-      d.foo(d, f); //error no match
-      d.foo(c, d, df); //error no match
+      //d.foo(d, f); //error no match
+      System.out.println("Error");
+      //d.foo(c, d, df); //error no match
+      System.out.println("Error");
       d.foo(df); // "B:foo(double)
       d.foo(i); // "B:foo(float)" derived
-      d.foo( ); // error, no match
-      d.foo(i, d, df); // error, no match
-      d.foo(c, b, f); // error, no match
+      //d.foo( ); // error, no match
+      System.out.println("Error");
+      //d.foo(i, d, df); // error, no match
+      System.out.println("Error");
+      d.foo(c, b, f); // "B:foo(int, B, float)" derived
       d.foo(f); // "B:foo(float)" derived
-      d.foo(c); // error, no match
+      d.foo(c); // "B:foo(float)" derived
       d.foo(s, d, df); // "B:foo(short, B, double)"
-      d.foo(i, d); //error, no match
+      //d.foo(i, d); //error, no match
+      System.out.println("Error");
 
       System.out.println("b.caller");
       b.caller( );
       /*
-	foo(d,f) = error, no match
-	foo(c, d, df)  = error, no match
-	foo(s) = "B:foo(short)"
-	foo(i) = "B:foo(short)"
+       * b.caller
+       * foo(d,f) = error, no match
+       * foo(c, d, df)  = error, no match
+       * foo(s) = "B:foo(short)"
+       * foo(i) = "B:foo(double)"
        */
 
    }
