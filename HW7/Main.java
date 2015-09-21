@@ -13,20 +13,26 @@ class Main {
       D d = new D( );
 
       System.out.println("Direct calls");
-      d.foo(d, f); 
-      d.foo(c, d, df);
-      d.foo(df); 
-      d.foo(i); 
-      d.foo( );
-      d.foo(i, d, df);
-      d.foo(c, b, f); 
-      d.foo(f); 
-      d.foo(c); 
-      d.foo(s, d, df); 
-      d.foo(i, d);
+      d.foo(d, f); //error no match
+      d.foo(c, d, df); //error no match
+      d.foo(df); // "B:foo(double)
+      d.foo(i); // "B:foo(float)" derived
+      d.foo( ); // error, no match
+      d.foo(i, d, df); // error, no match
+      d.foo(c, b, f); // error, no match
+      d.foo(f); // "B:foo(float)" derived
+      d.foo(c); // error, no match
+      d.foo(s, d, df); // "B:foo(short, B, double)"
+      d.foo(i, d); //error, no match
 
       System.out.println("b.caller");
       b.caller( );
+      /*
+	foo(d,f) = error, no match
+	foo(c, d, df)  = error, no match
+	foo(s) = "B:foo(short)"
+	foo(i) = "B:foo(short)"
+       */
 
    }
 }
