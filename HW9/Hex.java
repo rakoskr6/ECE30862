@@ -133,5 +133,38 @@ class Hex implements Comparable {
    }
 
    // Need to define the various interface functions here.
-   . . .
+   // Implement the Comparable interface functions here.
+   public double value(){  
+      return intValue;
+      
+   }
+  
+   public boolean lessThan(Comparable c){  
+      if (this.intValue < c.value()) {
+         return true;
+      }
+      else {
+         return false;
+      }
+   }
+  
+   public boolean equal(Comparable c){  
+      if (this.intValue == c.value()) {
+         return true;
+      }
+      else {
+         return false;
+      }
+   }
+  
+   public boolean greaterThan(Comparable c){ 
+   if (this.intValue > c.value()) {
+         return true;
+      }
+      else {
+         return false;
+      }
+      
+   }
+   
 }

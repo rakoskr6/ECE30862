@@ -12,6 +12,12 @@ class Main {
          for (int i = 1; i <= n-1; i++) { 
              // Compare i-1 and i element, swap if i-1 element > i element.
              // set swapped appropriately.
+        	 if (a[i-1] > a[i]) {
+        		 a[i-1] = a[i];
+        		 swapped = true;
+        	 }
+        	 
+        	 }
          }
          n = n - 1;
       }

@@ -4,16 +4,18 @@ class Int implements Comparable {
 
    Integer i;
 
-   public Int(int j) {i = new Integer(j);}
+   public Int(int j) {
+	   i = new Integer(j);
+	   }
 
    // Implement the Comparable interface functions here.
    public double value(){  
-      return 1;
+      return i;
       
    }
   
    public boolean lessThan(Comparable c){  
-      if (this.value < c.value) {
+      if (this.i < c.value()) {
          return true;
       }
       else {
@@ -22,7 +24,7 @@ class Int implements Comparable {
    }
   
    public boolean equal(Comparable c){  
-      if (this.value == c.value) {
+      if (this.i == c.value()) {
          return true;
       }
       else {
@@ -31,7 +33,7 @@ class Int implements Comparable {
    }
   
    public boolean greaterThan(Comparable c){ 
-   if (this.value > c.value) {
+   if (this.i > c.value()) {
          return true;
       }
       else {
