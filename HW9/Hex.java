@@ -135,7 +135,7 @@ class Hex implements Comparable {
    // Need to define the various interface functions here.
    // Implement the Comparable interface functions here.
    public double value(){  
-      return intValue;
+      return doubleValue;
       
    }
   

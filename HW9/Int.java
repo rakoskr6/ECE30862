@@ -33,6 +33,7 @@ class Int implements Comparable {
    }
   
    public boolean greaterThan(Comparable c){ 
+	   System.out.println("Comparing " + c.value() + " with " + this.i); 
    if (this.i > c.value()) {
          return true;
       }
