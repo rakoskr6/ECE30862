@@ -15,21 +15,24 @@ class DataObject {
         System.out.println(dataItem1 == dataItem2);
     }
 
-    static void keepBusy( int howLong ) {
+    void keepBusy( int howLong ) {
         long curr = System.currentTimeMillis();
         while ( System.currentTimeMillis() < curr + howLong );
     }
 }
 
+
+
+
 class RepeatedUpdates extends Thread  {
     DataObject dobj;
     int threadId;
 
-    RepeatedUpdates( DataObject d ) {
+     RepeatedUpdates( DataObject d ) {
         dobj = d;
         start();
     }
-    public void run( ) {
+    synchronized public void run( ) {
         int i = 0;
         threadId = (int) Thread.currentThread().getId();
         
@@ -44,6 +47,10 @@ class RepeatedUpdates extends Thread  {
         }
     }
 }
+
+
+
+
 
 public class Update1 {  
     public static void main( String[] args ) {           
