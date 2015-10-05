@@ -1,0 +1,5 @@
+Input integer n, size of array
+2000
+Time 36558 ms for single thread
+Time 28648 ms for two threads
+Time 28457 ms for four threads
