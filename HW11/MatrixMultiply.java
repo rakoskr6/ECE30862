@@ -1,20 +1,28 @@
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Arrays;
+import java.lang.*;
 
 class MatrixObject {                                         
     int n;
     int [][] matrix;
     
-    MatrixObject() {
+    MatrixObject(){
     	Scanner in = new Scanner(System.in);
         System.out.println("Input integer n, size of array");
+        
+        
         n = in.nextInt();
         fill(n);
     	
     }
     
-    public void fill (int q) {
+    public void fill (int q) throws IllegalArgumentException{
+    	if (q % 2 != 0) {
+        	throw new IllegalArgumentException("N is " + q  + " but it must be even");
+        }
+    	
+    	
     	int i, x;
     	matrix = new int[q][q];
     	Random rn = new Random();
@@ -73,14 +81,22 @@ class RepeatedUpdates extends Thread  {
 
 
 
-
-
 public class MatrixMultiply {  
     public static void main( String[] args ) {           
+        boolean loop = true;
         
-        
-    	MatrixObject m = new MatrixObject();  
-    	m.print();
-
+        while (loop) {
+          	
+	    	
+	        try {
+	        	MatrixObject m = new MatrixObject();  
+	        	m.print();
+	        	loop = false;
+	        }
+	        catch (IllegalArgumentException e) {
+	        	System.out.println(e.getLocalizedMessage());
+	        	
+	        }
+        }
     }
 }    
