@@ -1,44 +1,51 @@
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Arrays;
+
 class MatrixObject {                                         
-    int dataItem1;
-    int dataItem2;
-    int matrix[n][n];
+    int n;
+    int [][] matrix;
     
-    MatrixObject(int n) {
-    	fill (n);
+    MatrixObject() {
+    	Scanner in = new Scanner(System.in);
+        System.out.println("Input integer n, size of array");
+        n = in.nextInt();
+        fill(n);
     	
     }
     
-    public void fill (int n) {
+    public void fill (int q) {
     	int i, x;
+    	matrix = new int[q][q];
     	Random rn = new Random();
+    	n = q;
     	
     	for (i = 0; i < n; i++) {
     		for (x = 0; x < n; x++) {
+    			
     			matrix[i][x] = rn.nextInt(10);
     		}
     	}
-    	
     }
     
-    public 
 
-    void set1(int d) {dataItem1 = d;}
-
-    void set2(int d) {dataItem2 = d;}
-
-    void test() {
-        System.out.println(dataItem1 == dataItem2);
+    public void print () {
+    	System.out.println(Arrays.deepToString(matrix));
     }
+    
 
+/*
     void keepBusy( int howLong ) {
         long curr = System.currentTimeMillis();
         while ( System.currentTimeMillis() < curr + howLong );
     }
+*/
+
 }
 
 
 
-
+/*
 class RepeatedUpdates extends Thread  {
     DataObject dobj;
     int threadId;
@@ -62,6 +69,7 @@ class RepeatedUpdates extends Thread  {
         }
     }
 }
+*/
 
 
 
@@ -69,10 +77,10 @@ class RepeatedUpdates extends Thread  {
 
 public class MatrixMultiply {  
     public static void main( String[] args ) {           
-        DataObject d = new DataObject();  
-        new RepeatedUpdates( d );  
-        new RepeatedUpdates( d ); 
-        new RepeatedUpdates( d );
-        new RepeatedUpdates( d );
+        
+        
+    	MatrixObject m = new MatrixObject();  
+    	m.print();
+
     }
 }    
