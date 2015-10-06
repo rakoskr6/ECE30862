@@ -1,0 +1,59 @@
+Buf:
+			
+Lock’s wait queue:
+C1			
+Lock’s blocked queue:
+			
+
+Buf:
+C			
+Lock’s wait queue:
+C1	C2		
+Lock’s blocked queue:
+			
+
+Buf:
+			
+Lock’s wait queue:
+			
+Lock’s blocked queue:
+C1			
+
+
+No, C2 just removed c.
+Now c1 is in the blocked queue waiting for a character to be added to buffer.
+If no while loop the program would try to take a character from the buffer when nothing is there
+
+
+
+Buf:
+c			
+Lock’s wait queue:
+P2	P3		
+Lock’s blocked queue:
+			
+
+Buf:
+			
+Lock’s wait queue:
+P2	P3	C2	C3
+Lock’s blocked queue:
+			
+
+Buf:
+			
+Lock’s wait queue:
+P2	P3	C2	C3
+Lock’s blocked queue:
+			
+
+Buf:
+d			
+Lock’s wait queue:
+P3	C2	C3	
+Lock’s blocked queue:
+			
+
+Yes, P3, C2, or C3 could be selected.
+It would wake up all the threads and allow C2 or C3 to grab the character and then proceed to execute the rest of the P and C functions
+
